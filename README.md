@@ -24,8 +24,10 @@ podman run -d --name my-first-pod -p 3001:3000 my-first-pod
 # How to test?
 
 ```shell
-curl  --location  http://localhost:3001/  
+curl  --location http://localhost:3001/  
 > What kind of fruit is that? 🍍
 ```
 
 # Related article
+
+[How to Run Secure Pods with Podman](https://willsena.dev/how-to-run-secure-pods-with-podman/)
