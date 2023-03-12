@@ -25,11 +25,12 @@ defmodule Fruit.Plug do
   def init(options), do: options
 
   def call(conn, _opts) do
-    index = (Kernel.length(@fruits) - 1) |> :rand.uniform()
+    fruits_size = Kernel.length(@fruits)
+    index = :rand.uniform(fruits_size - 1)
     fruit = Enum.at(@fruits, index)
 
     conn
-    |> put_resp_content_type("text/plain")
+    |> put_resp_content_type("text/plain">)
     |> send_resp(200, "What kind of fruit is that? #{fruit}")
   end
 end
